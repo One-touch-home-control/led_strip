@@ -1,5 +1,5 @@
 #include "ledstrip.h"
-#include <FastLED.h>   // 온라인으로 다운바람
+#include "FastLED/FastLED.h"   // 온라인으로 다운바람
 
 #define LED_TYPE    WS2811
 #define COLOR_ORDER GRB
