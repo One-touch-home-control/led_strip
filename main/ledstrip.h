@@ -1,8 +1,7 @@
 #ifndef LEDSTRIP_H
 #define LEDSTRIP_H
 
-#include "Arduino.h"
-#include <FastLED.h>
+#include "FastLED/FastLED.h"
 
 #define LED_PIN     8  // 스트립 핀번호
 #define NUM_LEDS    20 // 스트립 길이
