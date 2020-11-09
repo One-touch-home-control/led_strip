@@ -33,10 +33,9 @@ def colorSetting(strip, color, pin=-1):
             strip.setPixelColor(i, color)
         
 # strip 보여주기, 순차적으로 보여주기 형태로 딜레이 존재
-def stripShow(strip, wait_ms=50):
+def stripShow(strip):
     for i in range(strip.numPixels()):
         strip.show()
-        time.sleep(wait_ms/1000.0)
 
 
 # Define functions which animate LEDs in various ways. strip.setPixelColor 에 넣을 핀번호와 색(color( , , ) rgb) 형태로 넣으면 설정, show 하면 보여줌
@@ -100,7 +99,7 @@ def theaterChaseRainbow(strip, wait_ms=50):
 if __name__ == '__main__':
     # Process arguments
     #parser = argparse.ArgumentParser()
-   # parser.add_argument('-c', '--clear', action='store_true', help='clear the display on exit')
+    #parser.add_argument('-c', '--clear', action='store_true', help='clear the display on exit')
     #args = parser.parse_args()
 
     # Create NeoPixel object with appropriate configuration. 스트립 생성
@@ -111,8 +110,8 @@ if __name__ == '__main__':
     print ('Press Ctrl-C to quit.')
 
     try:
-        
         while True:
+            """
             a = 0;
             for i in range(0, strip.numPixels()):
                 if(a == 0):
@@ -124,7 +123,10 @@ if __name__ == '__main__':
                 a+=1
                 if(a == 3):
                     a=0
+                    """
             
+            for i in range(0, strip.numPixels()):
+                colorSetting(strip, Color(30,20,30))
             stripShow(strip)
 #            print ('Color wipe animations.')
 #            colorWipe(strip, Color(255, 0, 0), 0)  # Red wipe
